@@ -21,7 +21,7 @@ function Home() {
             <div className="flex space-x-1 text-2xl md:text-4xl">
               <ReactTyped
                 className="text-red-600 font-bold"
-                strings={["Software Engineer", "Full Stack Web Developer"]}
+                strings={["Software Engineer", "Full Stack Developer"]}
                 typeSpeed={30}
                 backSpeed={40}
                 loop={true}
@@ -29,16 +29,14 @@ function Home() {
             </div>
             <br />
             <p className="text-xl md:text-md text-justify">
-              As a highly driven and passionate Software Engineer, I thrive in
-              fast-paced environments where I can harness my technical expertise
-              in programming and web development to deliver impactful,
-              innovative solutions. My deep love for computer science fuels a
-              constant desire to explore new technologies and refine my skills,
-              ensuring that I remain at the forefront of industry advancements.
-              A natural problem solver and team player, I not only contribute
-              but also lead, guiding projects to success while consistently
-              pushing boundaries and setting new standards of excellence to
-              drive meaningful results.
+              As a highly driven and passionate Software Engineer, I excel in
+              fast-paced environments where I can leverage my technical
+              expertise in programming and web development to deliver innovative
+              solutions. My commitment to continuous learning and skill
+              refinement ensures that I stay ahead of industry advancements. A
+              natural problem solver and team player, I actively contribute
+              while also taking on leadership roles, consistently guiding
+              projects to success and setting new standards of excellence
             </p>
             <br />
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">

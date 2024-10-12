@@ -15,13 +15,14 @@ function Footer() {
           <div className=" flex flex-col items-center justify-center">
             <div className="flex space-x-4">
               {/* <FaFacebook size={24} /> */}
-              <a
+
+              {/* <a
                 href="https://twitter.com/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaTwitter size={34} />
-              </a>
+              </a> */}
 
               {/* <FaInstagram size={24} /> */}
 
@@ -34,7 +35,7 @@ function Footer() {
               </a>
               {/* Mail Icon */}
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:anasshaikh9074@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

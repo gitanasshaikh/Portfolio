@@ -6,12 +6,8 @@ import { React, useState, useEffect, useRef } from "react";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isSliding, setIsSliding] = useState(false);
-  const autoSlideTime = 5000; // 5 seconds auto-slide time
+  const autoSlideTime = 3000; // 3 seconds auto-slide time
   const slideRef = useRef();
-  let startX = 0;
-  let currentTranslate = 0;
-  let previousTranslate = 0;
 
   const cardItem = [
     {
@@ -46,91 +42,22 @@ const Projects = () => {
   ];
 
   const nextSlide = () => {
-    if (isSliding) return;
-    setIsSliding(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === cardItem.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  const prevSlide = () => {
-    if (isSliding) return;
-    setIsSliding(true);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cardItem.length - 1 : prevIndex - 1
-    );
-  };
-
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, autoSlideTime);
-    return () => clearInterval(slideInterval);
-  }, [currentIndex]);
-
-  const handleTouchStart = (e) => {
-    startX = e.touches[0].clientX;
-    previousTranslate = -currentIndex * window.innerWidth;
-    slideRef.current.style.transition = "none";
-  };
-
-  const handleTouchMove = (e) => {
-    const currentX = e.touches[0].clientX;
-    const deltaX = currentX - startX;
-    currentTranslate = previousTranslate + deltaX;
-
-    if (currentIndex === 0 && deltaX > 0) return;
-    if (currentIndex === cardItem.length - 1 && deltaX < 0) return;
-
-    slideRef.current.style.transform = `translateX(${currentTranslate}px)`;
-  };
-
-  const handleTouchEnd = () => {
-    const movedBy = currentTranslate - previousTranslate;
-
-    if (movedBy < -50) {
-      nextSlide();
-    } else if (movedBy > 50) {
-      prevSlide();
-    } else {
-      slideRef.current.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    slideRef.current.style.transition = "transform 0.5s ease-out";
-    previousTranslate = -currentIndex * window.innerWidth;
-  };
-
-  useEffect(() => {
-    const projectSection = document.querySelector('[name="Projects"]');
-    const slideContainer = slideRef.current;
-
-    const handleScroll = () => {
-      const sectionTop = projectSection.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (sectionTop <= windowHeight && sectionTop >= 0) {
-        slideContainer.addEventListener("touchstart", handleTouchStart);
-        slideContainer.addEventListener("touchmove", handleTouchMove);
-        slideContainer.addEventListener("touchend", handleTouchEnd);
-      } else {
-        slideContainer.removeEventListener("touchstart", handleTouchStart);
-        slideContainer.removeEventListener("touchmove", handleTouchMove);
-        slideContainer.removeEventListener("touchend", handleTouchEnd);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [currentIndex]);
+    const slideInterval = setInterval(nextSlide, autoSlideTime); // Auto-slide every 3 seconds
+    return () => clearInterval(slideInterval); // Clean up the interval when the component is unmounted
+  }, []);
 
   const handleTransitionEnd = () => {
-    setIsSliding(false);
+    // Handles smooth transition end
   };
 
   const goToSlide = (index) => {
-    if (isSliding) return;
-    setCurrentIndex(index);
+    setCurrentIndex(index); // Direct slide change on dot click
   };
 
   return (
@@ -144,10 +71,11 @@ const Projects = () => {
             Projects
           </h1>
 
+          {/* Slide Container */}
           <div
             ref={slideRef}
             className="w-full overflow-hidden"
-            style={{ height: "auto" }} // Ensure height adjusts to content
+            style={{ height: "auto" }}
           >
             <div
               className="flex transition-transform duration-500 ease-out"
@@ -164,14 +92,14 @@ const Projects = () => {
                   <div className="w-full md:w-1/3 flex justify-center mb-4 md:mb-0">
                     <img
                       src={logo}
-                      className="w-[300px] h-[200px] p-1 rounded-full border-[2px]"
+                      className="w-[200px] md:w-[300px] h-[150px] md:h-[200px] p-1 rounded-full border-[2px]"
                       alt={name}
                     />
                   </div>
 
                   {/* Text Container */}
                   <div className="w-full md:w-2/3 flex flex-col justify-center text-center md:text-left px-4">
-                    <h2 className="text-xl font-bold text-justify mb-2">
+                    <h2 className="text-lg md:text-xl font-bold text-justify mb-2">
                       {name}
                     </h2>
                     <p className="text-sm md:text-md text-justify leading-relaxed">
