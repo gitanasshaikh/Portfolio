@@ -15,8 +15,7 @@ const Projects = () => {
       logo: salesmanagers,
       name: "Sales Analysis and Report System",
       description:
-        "Engineered a full-stack Sales Management System to streamline order processing, optimize performance, and provide detailed analytics." +
-        " Developed a comprehensive Sales Management System showcasing Full-Stack Development proficiency. Dynamic Customer Management: Real-time updates for tracking leads and customer interactions, Detailed sales tracking with customizable reports ,Responsive Design, Monitored stock levels and managed orders.",
+        "Engineered a full-stack Sales Management System to streamline order processing, optimize performance, and provide real-time customer and sales tracking with customizable reports.",
     },
     {
       id: 2,
