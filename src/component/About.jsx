@@ -1,5 +1,4 @@
 import React from "react";
-
 function About() {
   return (
     <>
@@ -23,45 +22,52 @@ function About() {
             Education
           </h1>
           <span>
-            <span className="text-red-700 font-semibold text-x">
+            <span className="text-red-700 font-semibold text-x md:text-md text-justify">
               Bachelor of Technology in Computer Science{" "}
             </span>
             <br />
             <span className="text-sm">2020-2024</span>
             <br />
-            Shivajirao Kadam Institute of Technology & Management , Indore (M.P)
+            {/* Shivajirao Kadam Institute of Technology & Management  */}
+            SKITM, Indore M.P
           </span>
           <br />
-          <span className="text-red-700 font-semibold text-x">
+          <span className="text-red-700 font-semibold text-x md:text-md text-justify">
             Higher Secondary Education{" "}
           </span>
           <br />
           <span className="text-sm">2019-2020</span>
           <br />
-          <span>Innovative Public Higher Secondary School , Dewas (M.P)</span>
+          <span>
+            {/* Innovative Public Higher Secondary School */}
+            I.P.S, Dewas M.P
+          </span>
           <br />
-          <span className="text-red-700 font-semibold text-x">
+          <span className="text-red-700 font-semibold text-x md:text-md text-justify">
             Secondary Education{" "}
           </span>
           <br />
           <span className="text-sm">2017 - 2018</span>
           <br />
-          <span>Innovative Public Higher Secondary School , Dewas (M.P)</span>
+          <span>
+            {/* Innovative Public Higher Secondary School  */}
+            I.P.S, Dewas M.P
+          </span>
           <br />
           <br />
 
-          <h1 className="underline text-green-600 font-semibold text-xl">
-            Experience/Internship
+          <h1 className="underline text-green-600 font-semibold text-xl md:text-md text-justify">
+            Experience / Internship
           </h1>
           <span>
-            <span className="text-red-700 font-semibold text-lg">
+            <span className="text-red-700 font-semibold text-lg md:text-md text-justify">
               i-Softzone - Software Development Company
             </span>
             <br />
             <span className="text-sm">
               [Feb 2024 - July 2024]
             </span> <span /> <br />
-            <p>
+            <p className="md:text-md text-justify">
               In a 6-month internship at i-SOFTZONE, I actively contributed to a
               live project, applying my Full Stack Development expertise. I
               played a pivotal role in both Front-End and Back-End development,
@@ -71,12 +77,12 @@ function About() {
               and storage to optimize system functionality.
             </p>
             {/* <br /> */}
-            <span className=" text-red-700 font-semibold text-lg">
+            <span className=" text-red-700 font-semibold text-lg md:text-md text-justify">
               TechnoHacks EduTech{" "}
             </span>{" "}
             <br />
             <span className="text-sm">[Aug 2023 - Sep 2023] </span>
-            <p>
+            <p className="md:text-md text-justify">
               My internship at TechnoHacks EduTech, I gained exposure to web
               development tasks. As an intern, I contributed to tasks such as
               designing user interfaces and ensuring web application

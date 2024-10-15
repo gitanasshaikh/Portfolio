@@ -81,12 +81,17 @@ function Contact() {
               />
               {errors.message && <span>This field is required</span>}
             </div>
-            <button
-              type="submit"
-              className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300"
-            >
-              Send
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="bg-indigo-600 text-white
+               rounded-xl px-4 py-2
+               hover:bg-slate-700 duration-300
+               w-[200px]"
+              >
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </div>

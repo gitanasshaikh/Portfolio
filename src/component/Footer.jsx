@@ -34,13 +34,13 @@ function Footer() {
                 <FaLinkedinIn size={34} />
               </a>
               {/* Mail Icon */}
-              <a
+              {/* <a
                 href="mailto:anasshaikh9074@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <IoMdMail size={34} />
-              </a>
+              </a> */}
             </div>
             <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center">
               <p className="text-sm">&copy; 2024 All rights reserved.</p>

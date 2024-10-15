@@ -18,10 +18,14 @@ function Home() {
             <h1 className="flex space-x-1 text-2xl md:text-4xl">
               Hello, I'm a{" "}
             </h1>
-            <div className="flex space-x-1 text-2xl md:text-4xl">
+            <div className="flex space-x-1 text-4xl md:text-4xl">
               <ReactTyped
                 className="text-red-600 font-bold"
-                strings={["Software Engineer", "Full Stack Developer"]}
+                strings={[
+                  "Anas Shaikh",
+                  "Software Engineer",
+                  "Full Stack Developer",
+                ]}
                 typeSpeed={30}
                 backSpeed={40}
                 loop={true}
@@ -41,19 +45,19 @@ function Home() {
             <br />
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
               <div className="space-y-2">
-                <h1 className="underline font-bold text-xl">
+                <h1 className="underline font-bold text-2xl">
                   Currently working on
                 </h1>
                 <div className="flex space-x-5">
-                  <FaReact className="text-xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <FaNode className="text-xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <SiExpress className="text-xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <SiMongodb className="text-xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <SiMysql className="text-xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
+                  <FaReact className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
+                  <FaNode className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
+                  <SiExpress className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
+                  <SiMongodb className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
+                  <SiMysql className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
           <div className="md:w-1/2 order-1 mt-8 flex justify-center">
             {" "}
             {/* Center the image */}
