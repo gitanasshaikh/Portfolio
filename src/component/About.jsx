@@ -57,7 +57,7 @@ function About() {
           <br />
 
           <h1 className="underline text-green-600 font-semibold text-xl md:text-md text-justify">
-            Experience / Internship
+            Experience / Internships
           </h1>
           <span>
             <span className="text-red-700 font-semibold text-lg md:text-md text-justify">
