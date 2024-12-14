@@ -14,18 +14,6 @@ function Footer() {
         <div className="max-w-screen-2xl container mx-auto px-4 md:px-20">
           <div className=" flex flex-col items-center justify-center">
             <div className="flex space-x-4">
-              {/* <FaFacebook size={24} /> */}
-
-              {/* <a
-                href="https://twitter.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter size={34} />
-              </a> */}
-
-              {/* <FaInstagram size={24} /> */}
-
               <a
                 href="https://linkedin.com/in/anasshaikh90"
                 target="_blank"
@@ -33,14 +21,6 @@ function Footer() {
               >
                 <FaLinkedinIn size={34} />
               </a>
-              {/* Mail Icon */}
-              {/* <a
-                href="mailto:anasshaikh9074@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IoMdMail size={34} />
-              </a> */}
             </div>
             <div className="mt-8 border-t border-gray-700 pt-8 flex flex-col items-center">
               <p className="text-sm">&copy; 2024 All rights reserved.</p>

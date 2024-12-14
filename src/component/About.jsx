@@ -1,127 +1,76 @@
 import React from "react";
+
 function About() {
   return (
-    <>
-      <div
-        name="About"
-        className=" max-w-screen-2xl container mx-auto px-4 md:px-20 my-20 "
-      >
-        <div>
-          <h1 className="underline text-3xl flex justify-center font-bold mb-5">
-            About
-          </h1>
-          {/* <p>
-            Highly Motivated and Enthusiastic Software Engineer seeking a
-            challenging entry-level position in a Dynamic and fast-paced
-            Environment, where I can utilize my technical skills and quick
-            learning ability to make a meaningful contribution to the Company's
-            Success.
+    <div
+      name="About"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-20"
+    >
+      <div>
+        <h1 className="text-4xl text-center font-bold mb-10">About Me</h1>
+        <section className="mb-10">
+          <p className="text-lg text-justify leading-relaxed">
+            Hi, I’m <span className="font-bold text-red-600">Anas Shaikh</span>,
+            a dedicated full-stack software engineer with a focus on
+            problem-solving and developing innovative web applications. My
+            journey began with my first line of code, and since then, I have
+            continuously worked to improve my skills and stay ahead of industry
+            trends. I excel in fast-paced environments, building efficient and
+            scalable solutions that prioritize user experience. I value
+            collaboration and enjoy working with teams to tackle complex
+            challenges and deliver impactful solutions. Whether on personal
+            projects or in team settings, I always strive for excellence in
+            every aspect of my work. I am constantly seeking opportunities to
+            learn, grow, and contribute to exciting projects that push the
+            boundaries of technology. Let’s connect and work together to create
+            something outstanding.
           </p>
-          <br /> */}
-          <h1 className="underline text-green-600 font-semibold text-xl">
-            Education
-          </h1>
-          <span>
-            <span className="text-red-700 font-semibold text-x md:text-md text-justify">
-              Bachelor of Technology in Computer Science{" "}
-            </span>
-            <br />
-            <span className="text-sm">2020-2024</span>
-            <br />
-            {/* Shivajirao Kadam Institute of Technology & Management  */}
-            SKITM, Indore M.P
-          </span>
-          <br />
-          <span className="text-red-700 font-semibold text-x md:text-md text-justify">
-            Higher Secondary Education{" "}
-          </span>
-          <br />
-          <span className="text-sm">2019-2020</span>
-          <br />
-          <span>
-            {/* Innovative Public Higher Secondary School */}
-            I.P.S, Dewas M.P
-          </span>
-          <br />
-          <span className="text-red-700 font-semibold text-x md:text-md text-justify">
-            Secondary Education{" "}
-          </span>
-          <br />
-          <span className="text-sm">2017 - 2018</span>
-          <br />
-          <span>
-            {/* Innovative Public Higher Secondary School  */}
-            I.P.S, Dewas M.P
-          </span>
-          <br />
-          <br />
+        </section>
 
-          <h1 className="underline text-green-600 font-semibold text-xl md:text-md text-justify">
-            Experience / Internships
-          </h1>
-          <span>
-            <span className="text-red-700 font-semibold text-lg md:text-md text-justify">
-              i-Softzone - Software Development Company
-            </span>
-            <br />
-            <span className="text-sm">
-              [Feb 2024 - July 2024]
-            </span> <span /> <br />
-            <p className="md:text-md text-justify">
-              In a 6-month internship at i-SOFTZONE, I actively contributed to a
-              live project, applying my Full Stack Development expertise. I
-              played a pivotal role in both Front-End and Back-End development,
-              designing seamless, user-centric interfaces and developing a
-              scalable, high-performance Back-End system. Additionally, I took
-              charge of database management, ensuring efficient data handling
-              and storage to optimize system functionality.
-            </p>
-            {/* <br /> */}
-            <span className=" text-red-700 font-semibold text-lg md:text-md text-justify">
-              TechnoHacks EduTech{" "}
-            </span>{" "}
-            <br />
-            <span className="text-sm">[Aug 2023 - Sep 2023] </span>
-            <p className="md:text-md text-justify">
-              My internship at TechnoHacks EduTech, I gained exposure to web
-              development tasks. As an intern, I contributed to tasks such as
-              designing user interfaces and ensuring web application
-              functionality.
-            </p>
-          </span>
-          <br />
-          {/* <h1 className="text-green-600 font-semibold text-xl">
-            Skills & Expertise
-          </h1>
-          <span>
-            Proficient in [Programming Languages] Experienced with [Software
-            Tools/Technologies] Strong grasp of [Design Principles/Concepts]
-            Excellent problem-solving skills Effective communicator and
-            collaborator
-          </span> */}
-          <br />
-          {/* <h1 className="underline text-green-600 font-semibold text-xl">
-            Achievements & Awards
-          </h1>
-          <span>
-            [Award/Recognition], [Organization/Institution], [Year]
-            [Achievement], [Organization/Platform], [Year]
-          </span> */}
-          <br />
-          {/* <h1 className="underline text-green-600 font-semibold text-xl">
-            Mission Statement
-          </h1>
-          <p>
-            My mission is to leverage my skills and creativity to deliver
-            innovative [Your Field] solutions that exceed client expectations
-            and contribute positively to the digital landscape. I am committed
-            to continuous learning and growth, always seeking new challenges and
-            opportunities to expand my horizons.
-          </p> */}
-        </div>
+        {/* What I Bring Section */}
+        <section className="mb-10">
+          <h2 className="text-2xl text-red-600 font-semibold mb-4">
+            What I Bring
+          </h2>
+          <ul className="list-disc list-inside text-lg">
+            <li>
+              <span className="font-bold">Technical Expertise:</span> Proficient
+              in [Java, SQL, JavaScript] and frameworks such as [ReactJs].
+            </li>
+            <li>
+              <span className="font-bold">Leadership:</span> A proven track
+              record of leading projects, ensuring timely delivery, and
+              fostering teamwork.
+            </li>
+            <li>
+              <span className="font-bold">Continuous Learning:</span> Dedicated
+              to enhancing my skills through courses, certifications, and
+              self-learning.
+            </li>
+            <li>
+              <span className="font-bold">Problem Solving:</span> Passionate
+              about tacking challenges and finding efficient, creative
+              solutions.
+            </li>
+          </ul>
+        </section>
+
+        {/* Closing Section */}
+        <section className="text-center">
+          <h2 className="text-2xl text-red-600 font-semibold mb-4">
+            Let’s Connect
+          </h2>
+          <p className="text-lg leading-relaxed">
+            I’m always eager to collaborate on exciting projects and bring ideas
+            to life. Feel free to reach out to discuss opportunities or just to
+            say hi!
+          </p>
+        </section>
       </div>
+      <br />
+      <br />
       <hr />
-    </>
+    </div>
   );
 }
 

@@ -11,65 +11,51 @@ function Home() {
         name="Home"
         className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28"
       >
-        <div className="flex flex-col md:flex-row items-center">
-          {" "}
-          {/* Centered items */}
-          <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-            <h1 className="flex space-x-1 text-2xl md:text-4xl">
-              Hello, I'm a{" "}
+        <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12"> 
+          {/* Align text and image side by side with space between them */}
+          <div className="md:w-1/2 mt-12 md:mt-24 space-y-4 order-2 md:order-1 text-center md:text-left">
+            {/* Centered Text Block */}
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+              Hello, I'm <span className="text-red-600">Anas Shaikh</span>
             </h1>
-            <div className="flex space-x-1 text-4xl md:text-4xl">
+            <div className="flex justify-center md:justify-start text-4xl font-semibold text-gray-600">
               <ReactTyped
                 className="text-red-600 font-bold"
-                strings={[
-                  "Anas Shaikh",
-                  "Software Engineer",
-                  "Full Stack Developer",
-                ]}
-                typeSpeed={30}
-                backSpeed={40}
+                strings={["Software Engineer", "Full Stack Developer"]}
+                typeSpeed={50}
+                backSpeed={60}
                 loop={true}
               />
             </div>
-            <br />
-            <p className="text-xl md:text-md text-justify">
-              As a highly driven and passionate Software Engineer, I excel in
-              fast-paced environments where I can leverage my technical
-              expertise in programming and web development to deliver innovative
-              solutions. My commitment to continuous learning and skill
-              refinement ensures that I stay ahead of industry advancements. A
-              natural problem solver and team player, I actively contribute
-              while also taking on leadership roles, consistently guiding
-              projects to success and setting new standards of excellence
+            <br/>
+            <p className="text-lg md:text-xl text-gray-700 text-justify mt-4">
+              Passionate Software Engineer delivering innovative solutions through expertise in programming and web development. A problem solver and leader, driving projects to success with a commitment to excellence.
             </p>
-            <br />
-            <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
-              <div className="space-y-2">
-                <h1 className="underline font-bold text-2xl">
-                  Currently working on
-                </h1>
-                <div className="flex space-x-5">
-                  <FaReact className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <FaNode className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <SiExpress className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <SiMongodb className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                  <SiMysql className="text-3xl md:text-3xl hover:scale-110 duration-200 rounded-s-full border-[2px]" />
-                </div>
+<br/>
+            <div className="mt-8 space-y-4">
+              <h2 className="text-2xl font-bold text-gray-800 underline">
+                Currently working on:
+              </h2>
+              <div className="flex justify-center md:justify-start space-x-6">
+                <FaReact className="text-4xl hover:scale-105 transition-all duration-300 text-blue-500" />
+                <FaNode className="text-4xl hover:scale-105 transition-all duration-300 text-green-600" />
+                <SiExpress className="text-4xl hover:scale-105 transition-all duration-300 text-gray-700" />
+                <SiMongodb className="text-4xl hover:scale-105 transition-all duration-300 text-green-800" />
               </div>
             </div>
-          </div> 
+          </div>
+
+          {/* Logo Section */}
           <div className="md:w-1/2 order-1 mt-8 flex justify-center">
-            {" "}
-            {/* Center the image */}
             <img
               src={pic}
-              className="rounded-full w-50 h-50 md:w-[380px] md:h-[380px]" // Adjust size here for phone screens
+              className="rounded-full w-60 h-60 md:w-80 md:h-80 shadow-xl transition-all duration-300 transform hover:scale-105"
               alt="Profile"
             />
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="my-16 border-gray-300" />
     </>
   );
 }

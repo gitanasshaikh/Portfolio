@@ -84,7 +84,7 @@ function Contact() {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-indigo-600 text-white
+                className="bg-blue-600 text-white
                rounded-xl px-4 py-2
                hover:bg-slate-700 duration-300
                w-[200px]"
