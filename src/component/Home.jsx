@@ -11,7 +11,7 @@ function Home() {
         name="Home"
         className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28"
       >
-        <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12"> 
+        <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12">
           {/* Align text and image side by side with space between them */}
           <div className="md:w-1/2 mt-12 md:mt-24 space-y-4 order-2 md:order-1 text-center md:text-left">
             {/* Centered Text Block */}
@@ -27,12 +27,17 @@ function Home() {
                 loop={true}
               />
             </div>
-            <br/>
+            <br />
             <p className="text-lg md:text-xl text-gray-700 text-justify mt-4">
-              Passionate Software Engineer delivering innovative solutions through expertise in programming and web development. A problem solver and leader, driving projects to success with a commitment to excellence.
+              Passionate Software Engineer with a solid foundation in
+              programming and web development. Skilled in crafting efficient and
+              user-focused solutions, with a commitment to delivering excellence
+              in every project. A proactive problem solver and collaborative
+              team player, ready to contribute and grow in dynamic,
+              technology-driven environments.
             </p>
-<br/>
-            <div className="mt-8 space-y-4">
+            {/* <br /> */}
+            {/* <div className="mt-8 space-y-4">
               <h2 className="text-2xl font-bold text-gray-800 underline">
                 Currently working on:
               </h2>
@@ -42,7 +47,7 @@ function Home() {
                 <SiExpress className="text-4xl hover:scale-105 transition-all duration-300 text-gray-700" />
                 <SiMongodb className="text-4xl hover:scale-105 transition-all duration-300 text-green-800" />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Logo Section */}

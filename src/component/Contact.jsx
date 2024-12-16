@@ -27,16 +27,25 @@ function Contact() {
   };
   return (
     <>
+    
       <div
+      
         name="Contact"
         className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
       >
-        <h1 className="underline text-3xl flex justify-center font-bold mb-4">
-          Contact mee{" "}
-        </h1>
-        {/* <span className="flex justify-center">
+      <section className="text-center">
+          <h2 className="text-2xl text-red-600 font-semibold mb-4">
+            Let’s Connect
+          </h2>
+          <p className="text-lg leading-relaxed">
+            I’m always eager to collaborate on exciting projects and bring ideas
+            to life. Feel free to reach out to discuss opportunities or just to
+            say hi!
+          </p>
+        </section>
+        <span className=" text-lg leading-relaxed flex justify-center ">
           Fill out the form below to contact me!
-        </span> */}
+        </span>
         <div className=" flex flex-col items-center justify-center mt-5">
           <form
             onSubmit={handleSubmit(onSubmit)}
