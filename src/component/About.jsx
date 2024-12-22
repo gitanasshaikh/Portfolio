@@ -55,7 +55,7 @@ function About() {
                 i-Softzone Software Development Company
               </span>{" "}
               <br />
-              January 2023 - June 2023
+              June 2024 - December 2024
             </p>
             {/* <p className="text-md text-gray-700 italic">
               January 2023 - June 2023

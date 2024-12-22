@@ -59,14 +59,14 @@ function Navbar() {
 
         {/* Mobile Sidebar */}
         <div
-          className={`fixed top-0 right-0 h-full w-2/4 bg-white shadow-lg transition-transform duration-300 ease-in-out ${
-            menu ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 h-full w-2/2 bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+            menu ? "translate-x-1" : "translate-x-full"
           } md:hidden z-40`}
         >
           {/* Close button inside the sidebar */}
           <div className="flex justify-end p-4">
             <IoCloseSharp
-              size={24}
+              size={30}
               className="cursor-pointer"
               onClick={() => setMenu(false)} // Close the menu when X is clicked
             />
@@ -74,7 +74,7 @@ function Navbar() {
           <ul className="flex flex-col h-full px-8 space-y-4 justify-start">
             {navItems.map(({ id, text }) => (
               <li
-                className="hover:scale-105 duration-200 font-semibold cursor-pointer text-left text-xl py-2"
+                className="hover:scale-105 duration-300 font-semibold cursor-pointer text-left text-xl py-2"
                 key={id}
               >
                 <Link
@@ -91,7 +91,7 @@ function Navbar() {
                   <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                 </Link>
                 {/* Horizontal Line */}
-                <hr className="border-t border-gray-300" />
+                <hr className="border-t border-gray-500" />
               </li>
             ))}
           </ul>
