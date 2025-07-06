@@ -1,4 +1,5 @@
 import salesmanagers from "/salesmanager.jpg";
+import expense from "/expense.jpeg";
 import simonsays from "/simonsays.png";
 import evoting from "/evoting.jpeg";
 import portfolio from "/portfolio.jpg";
@@ -19,20 +20,27 @@ const Projects = () => {
     },
     {
       id: 2,
+      logo: expense,
+      name: "Trackify Expense Tracker",
+      description:
+        "Track daily expenses with a Java-powered app featuring secure DB storage and report generation ",
+    },
+    {
+      id: 3,
       logo: evoting,
       name: "E-Voting System",
       description:
         "Designed and developed a secure, scalable electronic voting system, enabling seamless online elections with robust data protection.",
     },
     {
-      id: 3,
+      id: 4,
       logo: portfolio,
       name: "Portfolio",
       description:
         "Built a custom portfolio website to showcase skills, projects, and achievements, reflecting a creative approach and technical expertise in web development.",
     },
     {
-      id: 4,
+      id: 5,
       logo: simonsays,
       name: "Simon Says Game",
       description:
