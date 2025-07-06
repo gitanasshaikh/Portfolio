@@ -3,6 +3,7 @@ import expense from "/expense.jpeg";
 import simonsays from "/simonsays.png";
 import evoting from "/evoting.jpeg";
 import portfolio from "/portfolio.jpg";
+
 import { React, useState, useEffect, useRef } from "react";
 
 const Projects = () => {

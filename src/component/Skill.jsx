@@ -6,8 +6,9 @@ import javascript from "/javascript.png";
 import reactjs from "/reactjs.png";
 import node from "/node.png";
 import express from "/express.png";
-import mongoDB from "/mongodb.jpg";
 import sql from "/sql.png";
+import mongodb from "/mongodb.png";
+import api from "/api.png";
 
 function Skill() {
   const cardItem = [
@@ -40,6 +41,16 @@ function Skill() {
       id: 6,
       logo: sql,
       name: "SQL",
+    },
+    {
+      id: 7,
+      logo: mongodb,
+      name: "MongoDB",
+    },
+    {
+      id: 8,
+      logo: api,
+      name: "API",
     },
   ];
   return (
