@@ -83,12 +83,11 @@ npm install
 npm run dev
 ```
 
-
 ## 🧑‍💻 Author
 
 **Anas Shaikh**  
 [Portfolio Website](https://anasportfolio41.netlify.app)  
-[LinkedIn](https://www.linkedin.com/in/anasshaikh41/) 
+[LinkedIn](https://www.linkedin.com/in/anasshaikh41/)
 [GitHub](https://github.com/gitanasshaikh)
 
 ---
