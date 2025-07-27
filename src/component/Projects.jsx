@@ -1,51 +1,90 @@
 import salesmanagers from "/salesmanager.jpg";
-import expense from "/expense.jpeg";
+import tracktally from "/tracktally.jpeg";
+import edutackifymanger from "/edutackifymanager.png";
 import simonsays from "/simonsays.png";
 import evoting from "/evoting.jpeg";
 import portfolio from "/portfolio.jpg";
 
-import { React, useState, useEffect, useRef } from "react";
+import { React, useState, useRef } from "react";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const autoSlideTime = 5000; // 5 seconds auto-slide time
   const slideRef = useRef();
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
   const cardItem = [
     {
       id: 1,
       logo: salesmanagers,
       name: "Sales Analysis and Report System",
-      description:
-        "Engineered a full-stack Sales Management System to streamline order processing, optimize performance, and provide real-time customer and sales tracking with customizable reports.",
+      description: `The Sales Analysis and Reporting System is a full-stack enterprise 
+      level web application designed to streamline and optimize a company's real-time
+      sales tracking, inventory management, payment handling, and business intelligence 
+      reporting. This system facilitates efficient management of core operations 
+      such as item and stock entry, customer order processing, and tracking of agents,
+      sellers, and dealers. It incorporates secure role based login access, ensuring
+      each user type can only accesses relevant parts of the system. Featuress are tailored per role.`,
     },
     {
       id: 2,
-      logo: expense,
-      name: "Trackify Expense Tracker",
-      description:
-        "Track daily expenses with a Java-powered app featuring secure DB storage and report generation ",
+      logo: tracktally,
+      name: "TrackTally Manager",
+      description: `TrackTally Manager is a Java-based desktop expense tracking application developed 
+      using Java Swing for the GUI and MySQL for backend storage. It allows users to add and manage 
+      expenses with fields like name, amount, date, and payment method. Data is stored via JDBC, and 
+      users can export reports in PDF (iText) and Excel (Apache POI) formats. The app includes automatic
+      date validation and formatted inputs. Designed as a practical tool, it helps users effectively
+      track personal or business expenses with simple and secure interface features.`,
     },
     {
       id: 3,
-      logo: evoting,
-      name: "E-Voting System",
-      description:
-        "Designed and developed a secure, scalable electronic voting system, enabling seamless online elections with robust data protection.",
+      logo: edutackifymanger,
+      name: "EduTaskify - Smart Study Planner",
+      description: `EduTaskify is a Java-based desktop study planner application designed to help students
+        manage academic tasks efficiently. It features task creation, category labels, due date tracking,
+        filtering, search, and export to PDF/CSV formats. Developed with core OOP principles like abstraction,
+        encapsulation, and polymorphism, it offers a clean, terminal-based interface. EduTaskify is ideal for
+        organizing assignments, exam schedules, and study routines. The project emphasizes time management,
+        focus, and productivity, while showcasing strong command over Java development practices in a practical,
+        real-world application designed specifically for students.`,
     },
     {
       id: 4,
       logo: portfolio,
       name: "Portfolio",
-      description:
-        "Built a custom portfolio website to showcase skills, projects, and achievements, reflecting a creative approach and technical expertise in web development.",
+      description: `Developed a custom personal portfolio website to professionally showcase skills,
+       featured projects, technical achievements, and creative strengths in web development.
+       Designed using modern HTML, CSS, and JavaScript standards, the site emphasizes visual
+       appeal and user-centric navigation. It includes sections like About, Projects, Skills,
+       and Contact with smooth scrolling and intuitive layout. Special focus was given to 
+       full responsiveness, ensuring compatibility across all screen sizes and major browsers.
+       The goal was to demonstrate both frontend design capabilities and technical proficiency
+       in building fast, accessible, and engaging digital experiences.`,
     },
     {
       id: 5,
       logo: simonsays,
       name: "Simon Says Game",
-      description:
-        "Created an engaging memory game with progressively challenging levels, improving user interaction and cognitive skill development.",
+      description: `Built a browser-based Simon Says game using HTML, CSS, and JavaScript to sharpen
+       memory and focus. The game challenges users to repeat color sequences that grow with each level,
+       enhancing cognitive skills through progressive difficulty. Features include responsive design,
+       smooth color animations, and sound feedback for a better experience. Frontend is visually
+       engaging with clean UI. Designed to improve user interaction while providing fun gameplay,
+       this project reflects proficiency in DOM manipulation, event handling, and modern UI principles
+       for interactive web applications.`,
+    },
+    {
+      id: 6,
+      logo: evoting,
+      name: "E-Voting System",
+      description: `Developed a secure and scalable electronic voting system to facilitate safe,
+       efficient, and transparent online elections. Built with a focus on data integrity and voter
+       authentication, the system enables users to cast votes digitally while preventing duplication
+       and tampering. Designed with role-based access control for administrators and voters, it ensures
+       encrypted data transmission and secure result storage. The application emphasizes usability,
+       scalability, and real-time vote tallying. Ideal for institutional or organizational elections, 
+       this project demonstrates expertise in security, backend logic, and digital governance solutions.`,
     },
   ];
 
@@ -59,13 +98,30 @@ const Projects = () => {
     );
   };
 
-  // useEffect(() => {
-  //   const slideInterval = setInterval(nextSlide, autoSlideTime);
-  //   return () => clearInterval(slideInterval);
-  // }, []);
-
   const goToSlide = (index) => {
     setCurrentIndex(index);
+  };
+
+  // Touch swipe handlers
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const distance = touchStartX.current - touchEndX.current;
+      if (distance > 50) {
+        nextSlide(); // swipe left
+      } else if (distance < -50) {
+        prevSlide(); // swipe right
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
   };
 
   return (
@@ -80,6 +136,9 @@ const Projects = () => {
         ref={slideRef}
         className="w-full overflow-hidden"
         style={{ height: "auto" }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div
           className="flex transition-transform duration-700 ease-in-out"
@@ -104,7 +163,7 @@ const Projects = () => {
                 <h2 className="text-lg md:text-xl font-bold mb-4 text-center md:text-left">
                   {name}
                 </h2>
-                <p className="text-sm md:text-md text-gray-600 leading-relaxed text-center md:text-justify">
+                <p className="text-sm md:text-lg text-black-600 leading-relaxed text-justify">
                   {description}
                 </p>
               </div>
@@ -113,7 +172,8 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Navigation Dots */}
+      {/* Navigation Dots - These indicate current slide and help jump to specific one.
+          If you add more projects, no need to change this code. It will adjust automatically. */}
       <div className="flex justify-center mt-6">
         {cardItem.map((_, index) => (
           <button
@@ -126,23 +186,6 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Controls for Manual Navigation */}
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-        <button
-          onClick={prevSlide}
-          className="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
-        >
-          &#8249;
-        </button>
-      </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-        <button
-          onClick={nextSlide}
-          className="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
-        >
-          &#8250;
-        </button>
-      </div>
       <br />
       <hr />
     </div>

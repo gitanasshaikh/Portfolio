@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "/myimg.png";
+import pic from "/myimg.jpg";
 import { FaReact, FaNode } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 import { ReactTyped } from "react-typed";
@@ -54,7 +54,7 @@ function Home() {
           <div className="md:w-1/2 order-1 mt-8 flex justify-center">
             <img
               src={pic}
-              className="rounded-full w-60 h-60 md:w-80 md:h-80 shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="rounded-full w-50 h-70 md:w-100 md:h-100 shadow- transition-all duration-300 transform hover:scale-105"
               alt="Profile"
             />
           </div>
